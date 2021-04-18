@@ -39,27 +39,27 @@ else
 print "No Zone Match <br>";
 }
 
-if ($InputSelector == 'AM_FM') 
+if ($InputSelector == 'Input1') 
 {
   $inputid = "\x01";
 }
-elseif ($InputSelector == 'Wanpen')
+elseif ($InputSelector == 'Input2')
 {
   $inputid = "\x02";
 }
-elseif ($InputSelector == 'TV')
+elseif ($InputSelector == 'Input3')
 {
   $inputid = "\x03"; 
 }
-elseif ($InputSelector == 'Echo')
+elseif ($InputSelector == 'Input4')
 {
   $inputid = "\x04"; 
 }
-elseif ($InputSelector == 'Glen')
+elseif ($InputSelector == 'Input5')
 {
   $inputid = "\x05"; 
 }
-elseif ($InputSelector == 'John')
+elseif ($InputSelector == 'Input6')
 {
   $inputid = "\x06"; 
 }
