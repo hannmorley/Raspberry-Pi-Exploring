@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Niles Zones</title>
+<style type="text/css">
+
+textarea {
+width: 250px;
+height: 5em;
+}
+
+input, select, textarea {
+font-size: 150%;
+}
+
+</style>
+
+</head>
+<body>
+<h1 align="center">Zones<br><h1>
+
+<table id="table1" border="1" onclick="handleClick(event) width="30%" height="50%" align="center">
+   
+
+       <tr> 
+           <td align="center">
+                <form name="f1" action="./setzone.php" method="post">
+                <input id="Living Room" type="submit" name="Zone" value="Living Room">
+                <input id="1" type="hidden" name="ZoneID" value="1">
+                </form>
+           <td align="center">
+                <form name="f2" action="./setzone.php" method="post">
+                <input id="Kitchen" type="submit" name="Zone" value="Kitchen">
+                <input id="2" type="hidden" name="ZoneID" value="2">
+                </form>
+       </tr>
+       <tr>
+           <td align="center">
+                <form name="f3" action="./setzone.php" method="post">
+                <input id="Zone 3" type="submit" name="Zone" value="Zone 3">
+                <input id="3" type="hidden" name="ZoneID" value="3">
+                </form>
+           <td align="center">
+                <form name="f4" action="./setzone.php" method="post">
+                <input id="Patio" type="submit" name="Zone" value="Patio">
+                <input id="4" type="hidden" name="ZoneID" value="4">
+                </form>
+       </tr>
+       <tr>
+           <td align="center">
+                <form name="f5" action="./setzone.php" method="post">
+                <input id="M Bath" type="submit" name="Zone" value="M Bath">
+                <input id="5" type="hidden" name="ZoneID" value="5">
+                </form>
+           <td align="center">
+                <form name="f6" action="./setzone.php" method="post">
+                <input id="Basement" type="submit" name="Zone" value="Basement">
+                <input id="6" type="hidden" name="ZoneID" value="6">
+                </form>
+
+        </tr>
+</table>
+</body>
+</html>
+
