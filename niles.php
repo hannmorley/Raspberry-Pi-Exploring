@@ -2,13 +2,15 @@
 
 session_start();
 
+//  This program builds and then sends a control string to the Niles GXR2 based on inputs received from controller.php
+
 $server_ip = '10.100.0.1'; 
 $server_port = 6001;  
 $InputSelector = $_POST["InputSelector"]; 
 $zone = $_SESSION["Zone"];
 $navigation = $_SESSION["navigation"]; 
 
-// print ("input = " . $InputSelector . "<br>" . "Zone = " . $zone . "<br>"); 
+// Choose zone ID
 
 if ($zone == 'Living Room') 
 { 
@@ -38,6 +40,8 @@ else
 {
 print "No Zone Match <br>";
 }
+
+// Choose input ID
 
 if ($InputSelector == 'Input1') 
 {
@@ -87,17 +91,26 @@ else {
 print "No Input Match <br>";
 }
 
+// Build control string and store it in $message
+
 $message = "\x00\x12\x00" . $zoneid . "\x00\x0b\x61\x06" . $inputid . "\x00\xff";
 
-//            \x00\x0e\x00     \x23       \x00\x0b\x61\x06     \x03     \x00\xff
+//  Open a UDP socket
 
 if ($socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP)) {
     socket_bind($socket, $_SESSION["LocalIP"], 6001);
-    socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
+  
+//  Send the message
+  
+socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
 }
 else {
   print("can't create socket\n");
 }
+
+
+// If the control string is for vol+ or vol-, send it five times because volume changes for individual messages are
+// very small
 
 if ($InputSelector == 'Vol*'){
     for ($x=1; $x<=5; $x++){
