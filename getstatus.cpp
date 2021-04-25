@@ -39,7 +39,7 @@
      int status[6];
      fstream my_file;
  
- //  Open the status and pull down a copy of the status table  //
+ //  Open the status file and pull down a copy of the status table  //
   
 	my_file.open("/home/pi/GXR2status.txt", ios::in);
 	if (!my_file) {
