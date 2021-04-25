@@ -5,6 +5,7 @@ On a raspberry pi computer with apache properly configured, copy the following f
 index.html
 getstatus.php
 controller.php
+setzone.php
 niles.php
 vol,php
 nav.php
