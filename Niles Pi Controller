@@ -14,4 +14,6 @@ Connect the wired connection of a raspberry pi to the expansion port on the Nile
 Use the ifconfig command to get the IP address of the wired connection.
 From a computer on your local network, enter the IP as the URL to access the web server.
 
-You can control the Niles GXR2 from the web site on the pi.
+You can control the Niles GXR2 from the web site on the pi.  You will probably want to change the zone and device names to match your system, as I haven't figured out how to pull that information out of the GXR2.
+
+If you also want to know which device is selected, I wrote a c++ program that collects status packets in the packground and stores the status information in a file.  You can download the getstatus.cpp file and then compile and run it in a dedicated terminal session.  When its running, the background color will change to blue for the active input.  I'll provide additional details as work towards a first release of this project.  
