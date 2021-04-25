@@ -1,8 +1,8 @@
 Using a Raspberry Pi to control a Niles GXR2
 
-Connect the wired connection of a raspberry pi to the expansion port on the Niles GXR2.  Connect the wireless network on the pi to your local area netork.
-On a raspberry pi computer with apache properly configured, copy the following files from this directory into the /var/www/html directory:
+On a raspberry pi 3b+ or above computer with raspbian buster installed and apache properly configured and running, copy the following files from this directory into the /var/www/html directory on the pi:
 index.html
+
 getstatus.php
 controller.php
 setzone.php
@@ -10,7 +10,8 @@ niles.php
 vol,php
 nav.php
 
+Connect the wired connection of a raspberry pi to the expansion port on the Niles GXR2.  Connect the wireless network on the pi to your local area network.
 Use the ifconfig command to get the IP address of the wired connection.
-From a computer on your local network, access enter the IP as the URL to access the web server.
+From a computer on your local network, enter the IP as the URL to access the web server.
 
-You can control the Niles GXR2 from that web site.
+You can control the Niles GXR2 from the web site on the pi.
