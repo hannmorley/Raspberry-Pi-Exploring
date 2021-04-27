@@ -67,22 +67,6 @@ elseif ($InputSelector == 'Input6')
 {
   $inputid = "\x06"; 
 }
-elseif ($InputSelector == 'Vol+')
-{
-  $inputid = "\x0c"; 
-}
-elseif ($InputSelector == 'Vol-')
-{
-  $inputid = "\x0d";
-}
-elseif ($InputSelector == 'Prev')
-{
-  $inputid = "\x2b";
-}
-elseif ($InputSelector == 'Next')
-{
-  $inputid = "\x2c"; 
-}
 elseif ($InputSelector == 'Off')
 {
   $inputid = "\x0a"; 
@@ -108,15 +92,8 @@ else {
   print("can't create socket\n");
 }
 
-
-// If the control string is for vol+ or vol-, send it five times because volume changes for individual messages are
-// very small
-
-if ($InputSelector == 'Vol*'){
-    for ($x=1; $x<=5; $x++){
-         socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
-    }
-}
+socket_close($socket);
 
 echo "<meta http-equiv = \"refresh\" content = \"1; URL=http://" . $_SESSION["LocalIP"] . "/controller.php\">";
 
+?>
