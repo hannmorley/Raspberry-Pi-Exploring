@@ -34,6 +34,7 @@ $message  = "\x00\x12\x00" . $device_code[$index] . "\x00\x0b\x61\x06" . $inputi
 $socket = socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
 socket_bind($socket, $_SESSION["LocalIP"], 6001);
 socket_sendto($socket, $message, strlen($message), 0, $server_ip, $server_port);
+socket_close($socket);
 
 // Return to the controller.php page
 
