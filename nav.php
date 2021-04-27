@@ -2,6 +2,11 @@
 
 session_start();
 
+// This php module sends a command string to a Niles GXR2 to 
+// tell it to navigate to the previous or next song for an external
+// input device.  It is called by controller.php when the
+// prev or next buttons are selected.
+
 $server_ip = '10.100.0.1'; 
 $server_port = 6001;  
 $InputSelector = $_POST["InputSelector"]; 
