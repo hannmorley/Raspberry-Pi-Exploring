@@ -26,15 +26,28 @@ font-size: 300%;
 
 echo "<h1 align=\"center\">" . $_SESSION["Zone"] . "<h1><br>";
 
-//  Get current status from GXR2status.txt file
+//  Get current status from GXR2status.txt file, if it exists.
 
-$myfile = fopen("/home/pi/GXR2status.txt", "r") or die("Unable to open file!");
-$i=0;
-while(!feof($myfile)) {
-  $array[$i] = fgetc($myfile);  // each element in the array contains the status for one zoone
-  $i = $i + 1;
+if (file_exists("/home/pi/GXR2status.txt")) {
+     $myfile = fopen("/home/pi/GXR2status.txt", "r");    
+    $i=0;
+    while(!feof($myfile)) {
+         $array[$i] = fgetc($myfile);  // each element in the array contains the status for one zone
+         $i = $i + 1;
+    }
+     fclose($myfile);
+} else {
+  
+//
+//  If the GXR2status.txt file doesn's exist, populate the status array with zeroes.
+//
+     $i=0;
+     while($i<6) {
+          $array[$i] = "0";  // if the file doesn't exist, initialize the status array with zeros
+          $i = $i + 1;
+     }   
+
 }
-fclose($myfile);
 
 //  Save the selected zone and device status in session variables so that they can be read by other pages
 
