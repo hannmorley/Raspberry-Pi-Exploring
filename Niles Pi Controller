@@ -11,8 +11,8 @@ vol,php
 nav.php
 
 Connect the wired connection of a raspberry pi to the expansion port on the Niles GXR2.  Connect the wireless network on the pi to your local area network.
-Use the ifconfig command to get the IP address of the wired connection.
-From a computer on your local network, enter the IP as the URL to access the web server.
+Use the ifconfig command to get the IP address of the wireless connection.
+From a computer on your local network, open a web browser and enter the IP as the URL to access the web server.
 
 You can control the Niles GXR2 from the web site on the pi.  You will probably want to change the zone and device names to match your system, as I haven't figured out how to pull that information out of the GXR2.
 
