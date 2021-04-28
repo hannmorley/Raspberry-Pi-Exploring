@@ -12,27 +12,27 @@ $navigation = $_SESSION["navigation"];
 
 // Choose zone ID
 
-if ($zone == 'Living Room') 
+if ($zone == 'zone 1') 
 { 
   $zoneid = "\x21";
 }
-elseif ($zone == 'Kitchen')
+elseif ($zone == 'zone 2')
 {
   $zoneid = "\x22";
 }
-elseif ($zone == 'Zone 3')
+elseif ($zone == 'zone 3')
 {
   $zoneid = "\x23"; 
 }
-elseif ($zone == 'Patio')
+elseif ($zone == 'zone 4')
 {
   $zoneid = "\x24"; 
 }
-elseif ($zone == 'M Bath')
+elseif ($zone == 'zone 5')
 {
   $zoneid = "\x25"; 
 }
-elseif ($zone == 'Basement')
+elseif ($zone == 'zone 6')
 {
   $zoneid = "\x26"; 
 }
