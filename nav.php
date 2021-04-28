@@ -6,6 +6,10 @@ session_start();
 // tell it to navigate to the previous or next song for an external
 // input device.  It is called by controller.php when the
 // prev or next buttons are selected.
+//
+//  Please note that you must have getstatus.cpp running in order for this page to function properly.
+//  It will not function unless it knows which device is active, and getstatus provides that information.
+//  If getstatus is not running, the prev and next controls will do nothing when pressed.
 
 $server_ip = '10.100.0.1'; 
 $server_port = 6001;  
