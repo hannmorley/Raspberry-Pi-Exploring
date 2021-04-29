@@ -39,7 +39,7 @@
      int status[6];
      fstream my_file;
  
- //  Open the status file and pull down a copy of the status table  //
+ //  Open the status and pull down a copy of the status table  //
   
 	my_file.open("/home/pi/GXR2status.txt", ios::in);
 	if (!my_file) {
@@ -67,7 +67,7 @@
     	// Prepare it to receive multicast traffic // 
 
      mreq.imr_multiaddr = mcast_group.sin_addr;
-     mreq.imr_interface.s_addr = inet_addr("10.100.0.2");
+     mreq.imr_interface.s_addr = htonl(INADDR_ANY);
      setsockopt(recv_s, IPPROTO_IP, IP_ADD_MEMBERSHIP, &mreq, sizeof(mreq));
      
      //  Add six IP Addresses to the multicast group //
