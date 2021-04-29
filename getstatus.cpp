@@ -38,8 +38,17 @@
      char ips[] = {'1','2','3','4','5','6'};
      int status[6];
      fstream my_file;
- 
- //  Open the status and pull down a copy of the status table  //
+/*********************************************************************** 
+*  Open the GXR2 status file and pull down a copy of the status table  * 
+*  The status for each zone is represented by a number from 0 to 6.    * 
+*  0 - no input device selected                                        *
+*  1 - sirst input device selected                                     *
+*  2 - second input device selected                                    *
+*  3 - third input device selected                                     *
+*  4 - fourth input device selected                                    *
+*  5 - fifth input device selected                                     *
+*  6 - sixth input device selected                                     *
+************************************************************************
   
 	my_file.open("/home/pi/GXR2status.txt", ios::in);
 	if (!my_file) {
