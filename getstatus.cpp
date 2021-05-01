@@ -42,7 +42,7 @@
 *  Open the GXR2 status file and pull down a copy of the status table  * 
 *  The status for each zone is represented by a number from 0 to 6.    * 
 *  0 - no input device selected                                        *
-*  1 - sirst input device selected                                     *
+*  1 - first input device selected                                     *
 *  2 - second input device selected                                    *
 *  3 - third input device selected                                     *
 *  4 - fourth input device selected                                    *
